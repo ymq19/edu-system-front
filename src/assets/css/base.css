@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+}
+body .el-scrollbar__wrap {
+  width: calc(100% + 17px);
+  height: calc(100% + 17px);
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(53, 29, 29);
+  text-decoration: none;
+}
+/*清除浮动*/
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* logo字体 */
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('../font/webfont.eot'); /* IE9 */
+  src: url('../font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/webfont.woff2') format('woff2'),
+  url('../font/webfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+.web-font {
+  font-family: "webfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
